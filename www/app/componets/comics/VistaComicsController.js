@@ -39,12 +39,8 @@
           }
 
       }).then(function successCallback(response) {
-         
-
           $scope.comicsListado =response.data;
-           $scope.arrayC = response.data.data.results;
-           $scope.inicializar();
-
+          $scope.arrayC = response.data.data.results;
         }, function errorCallback(response) {
           
         });

@@ -46,10 +46,8 @@
               "inicio": {
                     templateUrl: "app/componets/comics/vistaComics.html",
                      controller: 'VistaComicsController as comicsCtrl'
-                   /
-
-                }
-            }
+              }
+    }
   })
 
   .state('index.detalleComics', {
