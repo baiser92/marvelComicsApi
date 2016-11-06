@@ -1,0 +1,6 @@
+{
+    "name": "Marvel Comics API Testing",
+    "description": "An Ionic app",
+    "repository": "https://github.com/baiser92/marvelComics.git",
+    "keywords": ["ionic", "marvel", "api"]
+}

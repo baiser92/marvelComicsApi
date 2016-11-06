@@ -1,0 +1,36 @@
+<ion-view view-title="listadoComics" scroll="true"  id="detalleComics" >
+
+	<ion-content class="backs" style="margin-top: 15%;">
+	<div class="bar bar-header item-input-inset">
+      <input type="text" placeholder=" Search" ng-model="search.title " style="width:100%; padding-left:11px;" />
+  </div>
+
+
+		<ion-grid>
+ 	 <ion-row class="item-thumbnail-lef" ng-repeat="array in arrayC | filter:search | limitTo:listlength" ng-click="irDetalleComics(array)">
+    <ion-col width-50  >
+    			<div style="text-align: -webkit-center;">
+    			    <h4>{{array.title}}</h4>
+    				<img src="{{array.thumbnail.path}}.{{array.thumbnail.extension}}"   class="imgComics">
+    				 <p >Published: {{array.dates[0].date | date:"MMMM-dd-yyyy"}}</p>
+    			</div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+		
+  	
+
+
+		<ion-infinite-scroll
+  			icon="ion-loading-c"
+  			on-infinite="paginacion()"
+  			distance="50%">
+       </ion-infinite-scroll>
+
+    
+
+	</ion-content>
+</ion-view>
+
+
+

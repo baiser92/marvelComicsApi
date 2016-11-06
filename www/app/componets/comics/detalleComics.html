@@ -1,0 +1,29 @@
+<ion-view view-title="detalleComics" scroll="true" id="detalleComics" >
+	<ion-content class="backs">
+    <div >
+      
+        <div  >
+            
+            <div class="contenedorHeader">
+      
+            <img ng-src="{{arrayDetalleComics.images[0].path}}.{{arrayDetalleComics.images[0].extension}}"  style="width: 65%; margin-top: 14%;">
+          </div>
+            
+          </div>
+      <div class="contenedorDetalleComics">
+        
+        <md-card-content> 
+          <h4>{{arrayDetalleComics.title}}</h4>
+          <h6 style="text-align: justify;">{{arrayDetalleComics.description}}</h6>
+          <div>
+           <p >Published: {{arrayDetalleComics.dates[0].date | date:"MMMM-dd-yyyy"}}</p>
+            <h6 ng-repeat="creators in arrayDetalleComics.creators.items"> {{creators.name}},{{creators.role}}</h6>
+          </div>
+        </md-card-content> 
+      </div>
+      
+
+    </div>
+
+	</ion-content>
+</ion-view>

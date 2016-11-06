@@ -1,0 +1,39 @@
+<ion-view view-title="inicio" scroll="true" id="vistaComics">
+	<ion-content class="backs ">  
+
+
+
+
+<div class="backs_new">COMICS</div> 
+<div class="sliderwsss" style="">
+   <hscroller>
+        <hcard ng-repeat="array in arrayC" index="{{$index}}" desc="{{array.desc}}" image="{{array.thumbnail.path}}.{{array.thumbnail.extension}}" ng-click="irDetalleComics(array)">
+          <div class="infoComcis">
+           
+          </div>
+           <p class="infoComcis" style="color: white;     font-size: xx-small; position: absolute;padding-top: 33%;"></p>
+            <p style="color: white; font-size: xx-small; position: absolute;padding-top: 36%; margin-left: 6%;">{{array.title| limitTo:18}}...</p> 
+           <p  style="color: white; font-size: xx-small; position: absolute;padding-top: 40%;margin-left: 6%;">Year Published: {{array.dates[0].date | date:"yyyy"}}</p> 
+        </hcard> 
+    </hscroller> 
+</div>
+
+<img src="img/show_more.png" class="show_more" ng-click="irListadoComics(comicsListado)"> 
+<div class=" " style="margin-top: 24%; text-align: -webkit-center;">
+   
+    <h6 style="position: absolute; margin-top: -35%; margin-left: 35%;">EVENTS</h6>
+  <div class="">
+    
+    <hscroller class="bestComics">
+        <hcard style="margin-top: 5%; margin-bottom: 5%;"ng-repeat="array in arrayE" index="{{$index}}" desc="{{array.desc}}" image="{{array.thumbnail.path}}.{{array.thumbnail.extension}}" ng-click="irDetalleComics(array)"> 
+          <p style="color: white;     font-size: xx-small;">{{array.title}}</p>
+          <!--<p style="color: white; font-size: xx-small;">Published: {{array.dates[0].date | date:"MMMM-dd-yyyy"}}</p> -->
+       </hcard> 
+      </hscroller> 
+
+  </div>
+  <img src="img/show_moreRED.png" class="show_moreRED" ng-click="irListadoEventos(listadoEventos)">
+
+</div>
+	</ion-content>
+</ion-view>
